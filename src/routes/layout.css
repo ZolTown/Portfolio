@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Martel:wght@200;300;400;600;700;800;900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+
+@theme {
+	/* Establish Custom Paper Theming Variables */
+	--color-paper-bg: #fdfbf7;
+	--color-paper-ink: #1a1a18;
+	--color-paper-muted: #5a5752;
+	--color-paper-border: #d9d5cd;
+	--color-paper-accent: #8c857b;
+	/* Establish Fonts */
+	--font-serif: 'Lora', 'Merriweather', serif;
+	--font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+}
