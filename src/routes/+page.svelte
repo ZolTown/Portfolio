@@ -1,4 +1,6 @@
 <script>
+	import headImage from '$lib/assets/HeadZZ.svg';
+
 	const currentYear = new Date().getFullYear();
 	const techMatrix = [
 		{ cat: 'Languages', tech: 'Elixir, Erlang' },
@@ -35,10 +37,11 @@
 					Building <span class="text-paper-accent">invisible </span> systems that never fail.
 				</p>
 			</div>
-		</header>
+		<img src={headImage} alt="Zoltán" class="inline-block mr-1 h-60 w-90" />
 		<!--TODO: line width, fill-color, stroke color-->
-		<img src=".\src\lib\assets\HeadZZ.svg" alt="Zoltán" class="inline-block mr-1 h-60 w-90" />
 
+		</header>
+	
 		<!-- Tech Stack Matrix (Grid Ledger) -->
 		<section class="matrix-section">
 			<h2 class="section-title">// Core Architecture Matrix</h2>
