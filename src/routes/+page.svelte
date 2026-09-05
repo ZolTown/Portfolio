@@ -5,8 +5,8 @@
 	const techMatrix = [
 		{ cat: 'Languages', tech: 'Elixir, Erlang' },
 		{ cat: 'Frameworks', tech: 'Phoenix, LiveView' },
-		{ cat: 'Data/Queues', tech: 'GraphQL, PostgreSQL, SQLite3, Riak' },
-		{ cat: 'Infra/Security', tech: 'Docker, Rancher, ArgoCD, K9s' }
+		{ cat: 'Data/Queues', tech: 'GraphQL, PostgreSQL, Riak' },
+		{ cat: 'Infra/Security', tech: 'Docker, Rancher, K9s' }
 	];
 </script>
 
@@ -19,29 +19,31 @@
 		<header class="site-header">
 			<div class="header-row">
 				<div>
-					<p class="eyebrow">// Banking Infrastructure</p>
+					<p class="eyebrow">// Distributed Systems Engineer</p>
 					<h1 class="site-title">Zoltán Madarász</h1>
 				</div>
 				<div class="header-meta">
 					<p>LOC: Budapest, HU</p>
 					<p>AVAILABILITY: Q3 2026</p>
-					<p class="font-bold text-paper-ink">✓ SECURE CONNECTION ESTABLISHED</p>
+					<p class="font-bold text-paper-ink">✓ DATA INTEGRITY FIRST</p>
 				</div>
 			</div>
-			<div class="site-intro">
-				<p class="m-0">
-					Backend engineer specializing in fault-tolerant, high-throughput microservices, and
-					airtight financial data security.<br />
-				</p>
-				<p class=" mt-5 mb-0 text-black">
-					Building <span class="text-paper-accent">invisible </span> systems that never fail.
-				</p>
+			<div class="header-body">
+				<div class="site-intro">
+					<p class="m-0 text-black">
+						Distributed Systems Engineer specializing in fault-tolerant, high-throughput services
+						and correct, dependable financial data.<br />
+					</p>
+					<p class=" mt-5 mb-0 text-black">
+						Building <span class="text-paper-accent">invisible </span> systems that never fail.
+					</p>
+				</div>
+				<div class="portrait-frame">
+					<img src={headImage} alt="Zoltán" class="portrait" />
+				</div>
 			</div>
-		<img src={headImage} alt="Zoltán" class="inline-block mr-1 h-60 w-90" />
-		<!--TODO: line width, fill-color, stroke color-->
-
 		</header>
-	
+
 		<!-- Tech Stack Matrix (Grid Ledger) -->
 		<section class="matrix-section">
 			<h2 class="section-title">// Core Architecture Matrix</h2>
@@ -72,32 +74,23 @@
 					</div>
 					<span class="font-serif text-xs text-paper-muted italic">01 // Fully Owned Project</span>
 				</div>
-				<!-- Description -->
 				<p class="description">
-					Architected and executed a zero-downtime message queue that ingresses 10k messages per
-					second of market data servicing a financial ranking service.<br />
-					The system is designed to be horizontally scalable (using a HashRing to distribute load), fault-tolerant,
-					and resilient to network partitions, ensuring uninterrupted service even under high load conditions.<br
-					/>
-					The main challenge was determining the acceptable delay time for buffering messages not to overload
-					the downstream services, while also ensuring that the system could recover gracefully from any
-					failures without data loss.<br />
-					It leverages a combination of Elixir, Phoenix, and Riak to ensure high availability and low
-					latency, while maintaining strict data integrity and security protocols.
+					Designed and implemented a zero-downtime message queue for market data consumed by a financial
+					ranking service. The system distributes load with a HashRing, buffers traffic to protect downstream
+					services, and recovers from network partitions without losing messages.
 				</p>
-				<!-- System Metrics Panel -->
-				<div class="metrics-grid">
+				<div class="metrics-grid project-facts">
 					<div class="metric">
-						<span class="block text-[10px] text-paper-accent uppercase">Throughput</span>
-						<span class="text-lg font-bold">10,000 txn/sec;</span>
+						<span class="metric-label">Scale</span>
+						<span class="metric-value">10,000 messages/sec</span>
 					</div>
 					<div class="metric">
-						<span class="block text-[10px] text-paper-accent uppercase">API's</span>
-						<span class="text-lg font-bold"> REST, GraphQL;</span>
+						<span class="metric-label">Architecture</span>
+						<span class="metric-value">HashRing distribution</span>
 					</div>
 					<div class="metric">
-						<span class="block text-[10px] text-paper-accent uppercase">Lines of Code</span>
-						<span class="text-lg font-bold">3604;</span>
+						<span class="metric-label">Reliability</span>
+						<span class="metric-value">Recovery without data loss</span>
 					</div>
 				</div>
 				<!-- Technical Metadata Footer -->
@@ -124,37 +117,23 @@
 							>02 // Scalability Case Study</span
 						>
 					</div>
-					<!-- Description -->
 					<p class="description">
-						Developed a fault-tolerant real-time market data distribution service on the OTP/BEAM
-						platform, delivering live prices and charts to 60,000+ concurrent GraphQL subscriptions
-						with &lt; 2 ms processing latency and sustained throughput of ~40,000 messages/sec.<br
-						/>
-						Designed and implemented entitlement logic to seamlessly provide either real-time or 5-minute
-						delayed market data based on user permissions.<br />
-						Despite handling high message volumes and supporting publish rates of up to 66,000 messages/sec,
-						the service maintained an efficient runtime footprint of approximately 0.5 GB RAM per node,
-						enabling cost-effective horizontal scaling without compromising latency—an essential requirement
-						in financial market data delivery.<br />
-						Implemented a comprehensive observability stack using Prometheus, Grafana, and Thanos, significantly
-						improving production visibility and reducing debugging and incident resolution time.<br
-						/>
-						Regularly participated in the on-call rotation, troubleshooting production incidents and ensuring
-						the reliability of latency-sensitive services.
+						Built a fault-tolerant OTP/BEAM service that delivers live prices and charts through GraphQL
+						subscriptions. Implemented entitlement logic for real-time and five-minute delayed data, then
+						added Prometheus, Grafana, and Thanos to support production observability and on-call diagnosis.
 					</p>
-					<!-- System Metrics Panel -->
-					<div class="metrics-grid">
+					<div class="metrics-grid project-facts">
 						<div class="metric">
-							<span class="block text-[10px] text-paper-accent uppercase">Latency</span>
-							<span class="text-lg font-bold">&lt; 2 ms;</span>
+							<span class="metric-label">Traffic</span>
+							<span class="metric-value">60,000+ subscriptions</span>
 						</div>
 						<div class="metric">
-							<span class="block text-[10px] text-paper-accent uppercase">Traffic</span>
-							<span class="text-lg font-bold">60k+ Subscriptions;</span>
+							<span class="metric-label">Latency</span>
+							<span class="metric-value">&lt; 2 ms processing</span>
 						</div>
 						<div class="metric">
-							<span class="block text-[10px] text-paper-accent uppercase">Runtime Efficiency</span>
-							<span class="text-lg font-bold">0.5 GB RAM / Node;</span>
+							<span class="metric-label">Operations</span>
+							<span class="metric-value">Prometheus, Grafana, Thanos</span>
 						</div>
 					</div>
 					<!-- Technical Metadata Footer -->
@@ -180,32 +159,24 @@
 							>03 // Merging Frontend and Backend</span
 						>
 					</div>
-					<!-- Description -->
 					<p class="description">
-						Developed two internal operational tools using Phoenix LiveView, delivering responsive,
-						user-friendly interfaces that improved the efficiency of L3 support engineers.<br />
-						Worked across the full application stack, translating operational workflows and user requirements
-						into integrated backend and frontend solutions without relying on a separate SPA architecture.<br
-						/>
-						Integrated the applications into the company's existing authentication infrastructure using
-						OpenID Connect (OIDC) with OAuth 2.0 endpoints, collaborating with DevOps to configure role-based
-						access control and user permissions.<br />
-						Built the UI with Tailwind CSS, DaisyUI, and custom reusable components, while wiring GraphQL
-						queries and mutations to user interactions to provide a seamless, real-time user experience.
+						Built two internal Phoenix LiveView tools for L3 support engineers to manage system health and
+						operational workflows. Worked across the stack, connecting GraphQL queries and mutations to
+						reusable UI components while integrating the applications with OIDC, OAuth 2.0, and role-based
+						access controls.
 					</p>
-					<!-- System Metrics Panel -->
-					<div class="metrics-grid">
+					<div class="metrics-grid project-facts">
 						<div class="metric">
-							<span class="block text-[10px] text-paper-accent uppercase">Platform</span>
-							<span class="text-lg font-bold">Internal Operations Platform;</span>
+							<span class="metric-label">Stack</span>
+							<span class="metric-value">Phoenix LiveView, GraphQL, Tailwind</span>
 						</div>
 						<div class="metric">
-							<span class="block text-[10px] text-paper-accent uppercase">Full-Stack Phoenix</span>
-							<span class="text-lg font-bold">Custom UI Components and State Management;</span>
+							<span class="metric-label">Access</span>
+							<span class="metric-value">OIDC, OAuth 2.0, RBAC</span>
 						</div>
 						<div class="metric">
-							<span class="block text-[10px] text-paper-accent uppercase">Role-Based Access</span>
-							<span class="text-lg font-bold">OIDC / OAuth2;</span>
+							<span class="metric-label">Ownership</span>
+							<span class="metric-value">Full-stack implementation</span>
 						</div>
 					</div>
 					<!-- Technical Metadata Footer -->
@@ -233,33 +204,23 @@
 							>04 // Cross-Team Collaboration</span
 						>
 					</div>
-					<!-- Description -->
 					<p class="description">
-						Responsible for maintaining and evolving a large-scale federated GraphQL schema spanning
-						32 subservices and over 20,000 lines of schema definitions.<br />
-						Ensured long-term maintainability and consistency of API contracts across multiple teams by
-						reviewing changes, discussing design decisions, and promoting sustainable schema evolution
-						practices.<br />
-						Coordinated with development teams to align changes across services and ensure a coherent,
-						stable release package within a structured 3-week release cycle.<br />
-						Helped prevent integration issues by maintaining clear communication between teams and ensuring
-						that API changes remained compatible, understandable, and maintainable over time.
+						Maintained and evolved a federated GraphQL schema spanning 32 subservices and more than 20,000
+						lines of schema definitions. Reviewed API changes, coordinated cross-team dependencies, and
+						helped produce compatible release packages on a structured three-week cycle.
 					</p>
-					<!-- System Metrics Panel -->
-					<div class="metrics-grid">
+					<div class="metrics-grid project-facts">
 						<div class="metric">
-							<span class="block text-[10px] text-paper-accent uppercase"
-								>Cross-Team Coordination</span
-							>
-							<span class="font-italic text-lg font-bold">20k+ LOC Schema;</span>
+							<span class="metric-label">Scope</span>
+							<span class="metric-value">32 subservices</span>
 						</div>
 						<div class="metric">
-							<span class="block text-[10px] text-paper-accent uppercase">API Governance</span>
-							<span class="font-italic text-lg font-bold">Federated GraphQL;</span>
+							<span class="metric-label">Governance</span>
+							<span class="metric-value">20,000+ lines of schema</span>
 						</div>
 						<div class="metric">
-							<span class="block text-[10px] text-paper-accent uppercase">Release Integration</span>
-							<span class="font-italic text-lg font-bold">32 Services;</span>
+							<span class="metric-label">Delivery</span>
+							<span class="metric-value">Three-week release cycle</span>
 						</div>
 					</div>
 					<!-- Technical Metadata Footer -->
@@ -271,11 +232,17 @@
 		</section>
 		<!-- Minimal Footer -->
 		<footer class="site-footer">
-			<p>© {currentYear} — Encrypted & Published via Clean Code Principles.</p>
+			<p>© {currentYear} Zoltán Madarász — Built with SvelteKit and Tailwind CSS.</p>
 			<div class="footer-links">
 				<a href="https://github.com/ZolTown" class="link">[GitHub]</a>
 				<a href="https://linkedin.com/in/zoltán-madarász-79513b180" class="link">[LinkedIn]</a>
-				<a href="mailto:zoltan.madarasz1@gmail.com" class="link">[Email]</a>
+				<a
+					href="https://mail.google.com/mail/?view=cm&fs=1&to=zoltan.madarasz1@gmail.com"
+					class="link"
+					target="_blank"
+					rel="noreferrer"
+					>[Email]</a
+				>
 			</div>
 		</footer>
 	</div>
@@ -299,6 +266,9 @@
 	:global(.header-row) {
 		@apply flex flex-col items-start justify-between gap-4 md:flex-row md:items-end;
 	}
+	:global(.header-body) {
+		@apply mt-2 grid grid-cols-1 gap-5 pb-4 md:grid-cols-[minmax(0,1fr)_14rem] md:gap-8;
+	}
 	:global(.eyebrow) {
 		@apply text-xs tracking-widest text-paper-accent uppercase;
 	}
@@ -310,7 +280,15 @@
 		@apply space-y-1 text-left text-xs text-paper-muted md:text-right;
 	}
 	:global(.site-intro) {
-		@apply mt-8 max-w-2xl font-serif text-lg text-paper-muted md:text-xl;
+		@apply mt-0 max-w-2xl self-center font-serif text-lg text-paper-muted md:text-xl;
+	}
+
+	:global(.portrait-frame) {
+		@apply my-0 flex h-56 items-center justify-center overflow-hidden border-l border-dashed border-paper-border pl-5 md:h-64;
+	}
+	:global(.portrait) {
+		@apply h-full w-full object-contain object-center;
+		transform: scaleX(-1) scale(1.06);
 	}
 	:global(.section-title) {
 		@apply text-xs font-bold tracking-widest text-paper-accent uppercase;
@@ -337,22 +315,31 @@
 		@apply flex items-baseline justify-between border-b border-dashed border-paper-border pb-4;
 	}
 	:global(.card-title) {
-		@apply font-serif text-2xl font-normal;
+		@apply font-serif text-xl leading-tight font-normal md:text-2xl;
 	}
 	:global(.card-subtitle) {
-		@apply mt-1 text-xs text-paper-accent;
+		@apply mt-2 text-[11px] leading-relaxed text-paper-accent;
 	}
 	:global(.card-desc) {
-		@apply max-w-3xl font-[Roboto] text-sm leading-relaxed text-paper-muted;
+		@apply max-w-3xl font-[Roboto] text-sm leading-7 text-paper-muted;
 	}
 	:global(.description) {
-		@apply max-w-3xl font-[Roboto] text-sm leading-relaxed text-paper-muted;
+		@apply max-w-3xl font-[Roboto] text-sm leading-7 text-paper-muted;
 	}
 	:global(.metrics-grid) {
-		@apply grid grid-cols-1 gap-4 pt-2 sm:grid-cols-3;
+		@apply grid grid-cols-1 gap-3 pt-1 sm:grid-cols-3;
+	}
+	:global(.project-facts) {
+		@apply gap-4 border-t border-dashed border-paper-border pt-4;
 	}
 	:global(.metric) {
-		@apply border-l-2 border-paper-ink pl-3 font-[Roboto];
+		@apply border-l border-paper-border pl-3 font-[Roboto];
+	}
+	:global(.metric-label) {
+		@apply block text-[9px] tracking-widest text-paper-accent uppercase;
+	}
+	:global(.metric-value) {
+		@apply mt-0.5 block text-xs leading-4 font-medium text-paper-ink;
 	}
 	:global(.meta-tags) {
 		@apply flex flex-wrap gap-2 pt-2 text-[11px] text-paper-muted;
